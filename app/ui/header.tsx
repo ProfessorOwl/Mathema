@@ -40,15 +40,15 @@ export function HeaderSimple() {
             {" "}
             <Image
               component={NextImage}
-              src="/logo.jpg"
+              src="/logo.png"
               alt=""
-              width={640}
-              height={640}
+              width={526}
+              height={223}
               fill={false}
-              h={50}
+              h={40}
               w={"auto"}
             />{" "}
-            <h1>Mathema</h1>
+            <h1>zuzule</h1>
           </Group>
         </Link>
 

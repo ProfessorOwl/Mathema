@@ -2,20 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Checkbox, Stack } from "@mantine/core";
+import { Checkbox, CheckboxProps, Stack } from "@mantine/core";
+import {IconDotsDiagonal2} from "@tabler/icons-react";
 
 interface CheckableHeadingProps {
   children: React.ReactNode;
   title: string;
   id?: string;
-  maxHeight?: number; // Optional prop to specify the shortened height
+  maxHeight?: number; 
 }
 
-export function CheckableHeading({ children, title, id, maxHeight = 90 }: CheckableHeadingProps) {
+export function CheckableHeading({ children, title, id, maxHeight = 100 }: CheckableHeadingProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const CheckboxIcon: CheckboxProps['icon'] = ({ indeterminate, ...others }) =>
+    indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />;
 
-  // Die Überschrift
+  // Die Überschrift wird zum Link hinzugefügt 
   const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
   const [checked, setChecked] = useState(false);
@@ -50,6 +53,9 @@ export function CheckableHeading({ children, title, id, maxHeight = 90 }: Checka
         checked={checked}
         onChange={(event) => handleChange(event.currentTarget.checked)}
         size="md"
+        color="red"
+        variant="outline"
+        icon={CheckboxIcon}
       />
       <h1 style={{ margin: 0 , filter: checked ? "opacity(30%)" : "none",
 }}>{title}</h1>
