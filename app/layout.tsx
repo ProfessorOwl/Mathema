@@ -9,7 +9,7 @@ import { theme } from "../theme";
 import { HeaderSimple } from "./ui/header";
 import { Lexend } from "next/font/google";
 import { LayoutGrid } from "./components/LayoutGrid";
-import "./styles/globals.css"
+import "./styles/globals.css";
 import "katex/dist/katex.min.css";
 
 export const metadata = {

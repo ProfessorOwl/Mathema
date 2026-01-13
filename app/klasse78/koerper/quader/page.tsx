@@ -2,7 +2,7 @@ import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading"
 
 export default function Quader() {
   return (
-    <SuspenseCheckableHeading title='Quader'>
+    <SuspenseCheckableHeading title="Quader">
       Oberflächeninhalt von Quadern
     </SuspenseCheckableHeading>
   );

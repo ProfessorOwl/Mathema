@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
-import { CheckableHeading } from './CheckableHeading';
+import { Suspense } from "react";
+import { CheckableHeading } from "./CheckableHeading";
 
 interface SuspenseCheckableHeadingProps {
   title: string;
@@ -8,7 +8,12 @@ interface SuspenseCheckableHeadingProps {
   maxHeight?: number;
 }
 
-export function SuspenseCheckableHeading({ title, children, id, maxHeight }: SuspenseCheckableHeadingProps) {
+export function SuspenseCheckableHeading({
+  title,
+  children,
+  id,
+  maxHeight,
+}: SuspenseCheckableHeadingProps) {
   return (
     <Suspense>
       <CheckableHeading title={title} id={id} maxHeight={maxHeight}>

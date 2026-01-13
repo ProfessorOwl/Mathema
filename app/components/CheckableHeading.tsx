@@ -3,30 +3,40 @@
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Checkbox, CheckboxProps, Stack } from "@mantine/core";
-import {IconDotsDiagonal2} from "@tabler/icons-react";
+import { IconDotsDiagonal2 } from "@tabler/icons-react";
 
 interface CheckableHeadingProps {
   children: React.ReactNode;
   title: string;
   id?: string;
-  maxHeight?: number; 
+  maxHeight?: number;
 }
 
-export function CheckableHeading({ children, title, id, maxHeight = 100 }: CheckableHeadingProps) {
+export function CheckableHeading({
+  children,
+  title,
+  id,
+  maxHeight = 100,
+}: CheckableHeadingProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const CheckboxIcon: CheckboxProps['icon'] = ({ indeterminate, ...others }) =>
-    indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />;
+  const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) =>
+    indeterminate ? (
+      <IconDotsDiagonal2 {...others} />
+    ) : (
+      <IconDotsDiagonal2 {...others} />
+    );
 
-  // Die Überschrift wird zum Link hinzugefügt 
-  const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
+  // Die Überschrift wird zum Link hinzugefügt
+  const uniqueId =
+    id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
   const [checked, setChecked] = useState(false);
 
   // Load checkbox state from URL query parameters on mount
   useEffect(() => {
     const urlValue = searchParams.get(uniqueId);
-      setChecked(urlValue === "true");
+    setChecked(urlValue === "true");
   }, [uniqueId, searchParams]);
 
   // Update URL when checkbox state changes
@@ -48,24 +58,27 @@ export function CheckableHeading({ children, title, id, maxHeight = 100 }: Check
 
   return (
     <Stack gap="0">
-    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-      <Checkbox
-        checked={checked}
-        onChange={(event) => handleChange(event.currentTarget.checked)}
-        size="md"
-        color="red"
-        variant="outline"
-        icon={CheckboxIcon}
-      />
-      <h1 style={{ margin: 0 , filter: checked ? "opacity(30%)" : "none",
-}}>{title}</h1>
-    </div>
-    <div style={{
-      position: "relative",
-      maxHeight: checked ? `${maxHeight}px` : "none",
-      filter: checked ? "opacity(30%)" : "none",
-      overflow: checked ? "hidden" : "visible",
-    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <Checkbox
+          checked={checked}
+          onChange={(event) => handleChange(event.currentTarget.checked)}
+          size="md"
+          color="red"
+          variant="outline"
+          icon={CheckboxIcon}
+        />
+        <h1 style={{ margin: 0, filter: checked ? "opacity(30%)" : "none" }}>
+          {title}
+        </h1>
+      </div>
+      <div
+        style={{
+          position: "relative",
+          maxHeight: checked ? `${maxHeight}px` : "none",
+          filter: checked ? "opacity(30%)" : "none",
+          overflow: checked ? "hidden" : "visible",
+        }}
+      >
         {children}
       </div>
     </Stack>

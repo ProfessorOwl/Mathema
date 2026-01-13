@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const links = [
   { link: "/klasse78", label: "Klassen 7+8" },
-  { link: "/klasse910", label: "Klassen 9+10"},
+  { link: "/klasse910", label: "Klassen 9+10" },
   { link: "/ueber", label: "Über das Projekt" },
 ];
 

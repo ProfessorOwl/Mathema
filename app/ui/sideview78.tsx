@@ -43,8 +43,13 @@ export function Sideview78() {
     if (item.children) {
       return (
         <div key={item.label}>
-          <div className={classes.link} style={{ paddingLeft: `${level * 16}px` }}>
-            {item.icon && <item.icon className={classes.linkIcon} stroke={1.5} />}
+          <div
+            className={classes.link}
+            style={{ paddingLeft: `${level * 16}px` }}
+          >
+            {item.icon && (
+              <item.icon className={classes.linkIcon} stroke={1.5} />
+            )}
             <span>{item.label}</span>
           </div>
           <div>

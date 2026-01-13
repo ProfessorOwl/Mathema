@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export function LayoutGrid({ children }: { children: any }) {
   const pathname = usePathname();
-  const showSideview78 =  pathname.startsWith("/klasse78") 
+  const showSideview78 = pathname.startsWith("/klasse78");
   const showSideview910 = pathname.startsWith("/klasse910");
 
   return (
@@ -19,11 +19,15 @@ export function LayoutGrid({ children }: { children: any }) {
       )}
       {showSideview910 && (
         <GridCol span={2.5}>
-          <Sideview910/>
+          <Sideview910 />
         </GridCol>
       )}
       <GridCol span={showSideview78 || showSideview910 ? 9.5 : 12}>
-       <ScrollAreaAutosize mah={"calc(100vh - 56px)"}><Container size={"md"} pt={20}>{children}</Container></ScrollAreaAutosize>
+        <ScrollAreaAutosize mah={"calc(100vh - 56px)"}>
+          <Container size={"md"} pt={20}>
+            {children}
+          </Container>
+        </ScrollAreaAutosize>
       </GridCol>
     </Grid>
   );

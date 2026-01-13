@@ -38,5 +38,5 @@
 
 .mainlink {
   text-decoration: none;
-  color:light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
+  color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
 }
