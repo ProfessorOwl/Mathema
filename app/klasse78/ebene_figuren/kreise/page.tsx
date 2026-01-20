@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Wuerfel() {
+export default function kreise() {
   return (
-    <SuspenseCheckableHeading title="Würfel">
-      Oberflächeninhalt von Würfeln
+    <SuspenseCheckableHeading title="Einführung">
+      Kreise
     </SuspenseCheckableHeading>
   );
 }

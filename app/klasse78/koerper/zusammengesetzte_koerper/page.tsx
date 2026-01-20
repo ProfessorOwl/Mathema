@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Volumina() {
+export default function Quader() {
   return (
-    <SuspenseCheckableHeading title="Volumina">
-      Volumina
+    <SuspenseCheckableHeading title="Zusammengesetzte Körper">
+      Zusammengesetzte Körper
     </SuspenseCheckableHeading>
   );
 }

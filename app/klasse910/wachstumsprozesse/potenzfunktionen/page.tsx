@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Quader() {
+export default function Potenzfunktionen() {
   return (
-    <SuspenseCheckableHeading title="Quader">
-      Oberflächeninhalt von Quadern
+    <SuspenseCheckableHeading title="Potenzfunktionen">
+      Potenzfunktionen
     </SuspenseCheckableHeading>
   );
 }

@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Flächeninhalte() {
+export default function Pyramiden() {
   return (
-    <SuspenseCheckableHeading title="Flächeninhalte">
-      Flächeninhalte
+    <SuspenseCheckableHeading title="Pyramiden">
+      Pyramiden
     </SuspenseCheckableHeading>
   );
 }

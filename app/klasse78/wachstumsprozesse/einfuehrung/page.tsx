@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Kugeln() {
+export default function Einfuehrung() {
   return (
-    <SuspenseCheckableHeading title="Kugeln">
-      Oberflächeninhalt von Kugeln
+    <SuspenseCheckableHeading title="Einführung">
+      Einführung zu Oberflächeninhalten
     </SuspenseCheckableHeading>
   );
 }

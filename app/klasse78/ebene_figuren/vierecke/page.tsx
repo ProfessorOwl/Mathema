@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Quader() {
+export default function vierecke() {
   return (
-    <SuspenseCheckableHeading title="Quader">
-      Oberflächeninhalt von Quadern
+    <SuspenseCheckableHeading title="Einführung">
+      Vierecke
     </SuspenseCheckableHeading>
   );
 }

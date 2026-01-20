@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Flächeninhalte() {
+export default function Dreiecke() {
   return (
-    <SuspenseCheckableHeading title="Flächeninhalte">
-      Flächeninhalte
+    <SuspenseCheckableHeading title="Einführung">
+      Dreiecke
     </SuspenseCheckableHeading>
   );
 }

@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
-export default function Volumina() {
+export default function Lineare_Funktionen() {
   return (
-    <SuspenseCheckableHeading title="Volumina">
-      Volumina
+    <SuspenseCheckableHeading title="Lineare Funktionen">
+      Lineare Funktionen
     </SuspenseCheckableHeading>
   );
 }

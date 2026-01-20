@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Burger, Container, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./header.module.css";
@@ -16,17 +16,14 @@ const links = [
 
 export function HeaderSimple() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const pathname = usePathname();
 
   const items = links.map((link) => (
     <Link
       key={link.label}
       href={link.link}
       className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={() => {
-        setActive(link.link);
-      }}
+      data-active={pathname.startsWith(link.link) || undefined}
     >
       {link.label}
     </Link>
@@ -35,7 +32,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Link href="/themen" className={classes.mainlink}>
+        <Link href="/ueber" className={classes.mainlink}>
           <Group>
             {" "}
             <Image

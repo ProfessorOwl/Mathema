@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { IconCylinder, IconGraph, IconSphere } from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
@@ -17,27 +17,44 @@ const data: NavItem[] = [
     label: "Körper",
     icon: IconSphere,
     children: [
-      { link: "/klasse78/koerper/einfuehrung", label: "Einführung Klasse 8" },
-      { link: "/klasse78/koerper/wuerfel", label: "Würfel" },
-      { link: "/klasse78/koerper/quader", label: "Quader" },
-      { link: "/klasse78/koerper/kugeln", label: "Kugeln" },
+      { link: "/klasse78/koerper/einfuehrung", label: "Einführung" },
       { link: "/klasse78/koerper/prismen", label: "Prismen" },
+      { link: "/klasse78/koerper/zylinder", label: "Zylinder" },
+      {
+        link: "/klasse78/koerper/zusammengesetzte_koerper",
+        label: "Zusammengesetzte Körper",
+      },
     ],
   },
   {
-    link: "/klasse78/volumina",
-    label: "Volumina von Körpern",
+    label: "Ebene Figuren",
     icon: IconCylinder,
+    children: [
+      { link: "/klasse78/ebene_figuren/einfuehrung", label: "Einführung" },
+      { link: "/klasse78/ebene_figuren/dreiecke", label: "Dreiecke" },
+      { link: "/klasse78/ebene_figuren/vierecke", label: "Vierecke" },
+      { link: "/klasse78/ebene_figuren/kreise", label: "Kreise" },
+    ],
   },
   {
-    link: "/klasse78/wachstumsfunktionen",
-    label: "Wachstumsfunktionen",
-    icon: IconGraph,
+    link: "/klasse78/wachstumsprozesse",
+    label: "Wachstumsprozesse",
+    children: [
+      { link: "/klasse78/wachstumsprozesse/einfuehrung", label: "Einführung" },
+      {
+        link: "/klasse78/wachstumsprozesse/anti-proportionale_funktionen",
+        label: "(Anti-)Proportionale Funktionen",
+      },
+      {
+        link: "/klasse78/wachstumsprozesse/lineare_funktionen",
+        label: "Lineare Funktionen",
+      },
+    ],
   },
 ];
 
 export function Sideview78() {
-  const [active, setActive] = useState("");
+  const pathname = usePathname();
 
   const renderNavItem = (item: NavItem, level = 0) => {
     if (item.children) {
@@ -61,10 +78,9 @@ export function Sideview78() {
       return (
         <Link
           className={classes.link}
-          data-active={item.label === active || undefined}
+          data-active={pathname === item.link || undefined}
           href={item.link}
           key={item.label}
-          onClick={() => setActive(item.label)}
           style={{ paddingLeft: `${level * 16}px` }}
         >
           {item.icon && <item.icon className={classes.linkIcon} stroke={1.5} />}
