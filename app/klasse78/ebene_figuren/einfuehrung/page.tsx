@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 
 export default function Einfuehrung() {
-  return (
-    <SuspenseCheckableHeading title="Einführung">
-      Einführung zu Ebenen Figuren
-    </SuspenseCheckableHeading>
-  );
+    return (
+        <SuspenseCheckableHeading title="Einführung">
+            Einführung zu Ebenen Figuren
+        </SuspenseCheckableHeading>
+    );
 }

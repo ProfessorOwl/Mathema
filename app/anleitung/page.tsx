@@ -1,3 +1,3 @@
 export default function Anleitung() {
-  return <h1>Anleitung</h1>;
+    return <h1>Anleitung</h1>;
 }
