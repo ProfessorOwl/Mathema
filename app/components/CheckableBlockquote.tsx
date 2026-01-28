@@ -80,7 +80,7 @@ export function CheckableBlockquote({
     const Icon = icon ? iconMap[icon as keyof typeof iconMap] : null;
 
     return (
-        <Blockquote px={"lg"} py={"md"} my={"md"}>
+        <Blockquote px={"lg"} py={"md"} my={"md"} data-checkable-id={uniqueId}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Checkbox
                     checked={checked}

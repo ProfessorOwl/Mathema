@@ -8,4 +8,11 @@ export const theme = createTheme({
         md: "16pt",
     },
     primaryColor: "teal",
+    lineHeights: {
+        xs: "1.6",
+        sm: "1.65",
+        md: "1.7",
+        lg: "1.75",
+        xl: "1.8",
+    },
 });

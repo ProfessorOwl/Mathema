@@ -130,31 +130,33 @@ export default function Prismen() {
                     id="Lösung-Schrägbilder"
                     titleOrder={2}
                 >
-                <Lösung>
-                    <Image
-                        h={300}
-                        fit="contain"
-                        component={NextImage}
-                        src="/SchrägbilderVervollständigenLösung@2x.png"
-                        width={2402}
-                        height={1200}
-                        alt="Schrägbild eines Quaders auf kariertem Papier."
-                    />
-                </Lösung>
+                    <Lösung>
+                        <Image
+                            h={300}
+                            fit="contain"
+                            component={NextImage}
+                            src="/SchrägbilderVervollständigenLösung@2x.png"
+                            width={2402}
+                            height={1200}
+                            alt="Schrägbild eines Quaders auf kariertem Papier."
+                        />
+                    </Lösung>
                 </CheckableHeading>
             </CheckableBlockquote>
 
-            <CheckableHeading title="Netze von Prismen">Geometrische Körper kann man in Netze zerlegen. Vielleicht hast du schonmal ein Würfelnetz aufgemalt, um daraus einen Spielwürfel zu basteln? Genau das geht auch bei Prismen. 
-
-                                <Image
-                        h={300}
-                        fit="contain"
-                        component={NextImage}
-                        src="/NetzWürfel.jpg"
-                        width={6000}
-                        height={4000}
-                        alt="Schrägbild eines Quaders auf kariertem Papier."
-                    />
+            <CheckableHeading title="Netze von Prismen">
+                Geometrische Körper kann man in Netze zerlegen. Vielleicht hast
+                du schonmal ein Würfelnetz aufgemalt, um daraus einen
+                Spielwürfel zu basteln? Genau das geht auch bei Prismen.
+                <Image
+                    h={300}
+                    fit="contain"
+                    component={NextImage}
+                    src="/NetzWürfel.jpg"
+                    width={6000}
+                    height={4000}
+                    alt="Schrägbild eines Quaders auf kariertem Papier."
+                />
             </CheckableHeading>
         </div>
     );
