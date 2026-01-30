@@ -38,7 +38,7 @@ export function HeaderSimple() {
                         {" "}
                         <Image
                             component={NextImage}
-                            src="/logo.svg"
+                            src="/Logo.svg"
                             alt=""
                             width={526}
                             height={223}
