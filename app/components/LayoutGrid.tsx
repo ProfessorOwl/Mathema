@@ -26,7 +26,7 @@ export function LayoutGrid({ children }: { children: any }) {
             )}
             <GridCol span={showOutline ? 7 : 12}>
                 <ScrollAreaAutosize mah={"calc(100vh - 56px)"}>
-                    <Container size={"md"} pt={20}>
+                    <Container size={"md"} pb={200}>
                         {children}
                     </Container>
                 </ScrollAreaAutosize>

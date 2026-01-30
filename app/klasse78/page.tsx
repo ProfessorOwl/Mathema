@@ -1,4 +1,3 @@
-import { InlineMath, BlockMath } from "react-katex";
 
 export default function Themen() {
     return (
